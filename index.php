@@ -219,13 +219,13 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_1.jpg" alt="мир детства">
+                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_1.jpg" alt="<?php bloginfo('name'); ?>">
             </div>
         </div>
 
         <div class="row">
             <div class="col-lg-6">
-                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_2.jpg" alt="мир детства">
+                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_2.jpg" alt="<?php bloginfo('name'); ?>">
             </div>
             <div class="col-lg-6">
                 <div class="subtitle">
@@ -256,7 +256,7 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_3.jpg" alt="мир детства">
+                <img class="aboutus__img" src="<?php echo bloginfo('template_url'); ?>/assets/img/about_3.jpg" alt="<?php bloginfo('name'); ?>">
             </div>
         </div>
     </div>
