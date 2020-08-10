@@ -860,6 +860,53 @@
             </div>
         </div>
     </div>
+    <?php 
+// function print_hello ($text , $name){
+//     echo 'Hello world' . $text . ' ' . $name;
+// };
+// function print_hello_1 (){
+//     echo 'Hello world_1' . '<br>';
+// };
+// function print_hello_2 (){
+//     echo 'Hello world_2' . '<br>';
+// };
+// add_action('my_hook', 'print_hello', 10, 2);
+// add_action('my_hook', 'print_hello', 15);
+// add_action('my_hook', 'print_hello_1', 10);
+// add_action('my_hook', 'print_hello_2', 5);
+// do_action('my_hook', 'dear customer', ' Kostyan');
+
+
+function my_filter_function($str){
+    return 'Hello' . $str . '<br>';
+};
+add_filter('my_filter', 'my_filter_function', 15);
+
+echo apply_filters('my_filter', 'World');
+remove_filter('my_filter', 'my_filter_function', 15);
+echo apply_filters('my_filter', 'World');
+
+// remove_action($tag, $function_to_remove, $priority);
+
+// add_filter('nav_menu_link_attributes', 'filter_nav_menu_link_attributes', 10, 3);
+// function filter_nav_menu_link_attributes($atts, $item, $args){
+//     if($args->menu === 'Main' ) {
+//         $atts['class'] .= ' header__nav-item-active';
+// };
+// if($item->ID === 106 && (in_category( 'soft_toys' ) || in_category( 'edu_toys' ))){
+//     $attr['class'] .= ' header__nav-item-active';
+// }
+// }
+// return $atts;
+// https://wp-kama.ru/hook/nav_menu_link_attributes
+
+
+
+?>
+
+
 <?php 
     get_footer(); 
 ?>
+
+
