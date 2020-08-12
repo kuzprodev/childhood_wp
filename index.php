@@ -248,7 +248,10 @@
                 </div>
             </div>
             <div class="col-lg-6">
-                <div id="map" class="contacts__map">
+                <!-- <div class="contacts__map acf-map">
+                    AIzaSyCGMSUGZtEB7eFFiNZ13kTAxGWsS5z8zUM 
+                </div> lkz acf and google map-->
+                <div id="map" class="contacts__map ">
                 </div>
             </div>
         </div>

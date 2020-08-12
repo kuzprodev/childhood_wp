@@ -13,7 +13,20 @@ function childhood_scripts()
 {
     wp_enqueue_script('childhood-scripts', get_template_directory_uri() . '/assets/js/main.min.js', array(), null, true);
     // wp_enqueue_script('childhood-scripts', get_template_directory_uri() . '/assets/js/main.min.js', array('jquery'), null, true);
+    wp_deregister_script('jquery'); //отключаем стандартный джиквери от вп
+    wp_register_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'); //регистрируем свою версию джиквери
+    wp_enqueue_script('jquery'); //подключаем свою версию джиквери
 };
 
 add_theme_support('custom-logo'); // активация логотипа кастомного
 add_theme_support('post-thumbnails'); //включить изображение записи метки в записях
+
+function my_acf_google_map_api($api)
+{
+
+    $api['key'] = 'AIzaSyCGMSUGZtEB7eFFiNZ13kTAxGWsS5z8zUM'; // Ваш ключ Google API
+
+    return $api;
+}
+
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
