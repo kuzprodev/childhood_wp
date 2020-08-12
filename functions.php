@@ -16,3 +16,4 @@ function childhood_scripts()
 };
 
 add_theme_support('custom-logo'); // активация логотипа кастомного
+add_theme_support('post-thumbnails'); //включить изображение записи метки в записях
