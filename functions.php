@@ -24,7 +24,7 @@ add_theme_support('post-thumbnails'); //включить изображение 
 function my_acf_google_map_api($api)
 {
 
-    $api['key'] = 'AIzaSyCGMSUGZtEB7eFFiNZ13kTAxGWsS5z8zUM'; // Ваш ключ Google API
+    $api['key'] = 'your-key'; // Ваш ключ Google API
 
     return $api;
 }
