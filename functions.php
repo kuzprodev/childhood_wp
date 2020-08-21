@@ -20,6 +20,20 @@ function childhood_scripts()
 
 add_theme_support('custom-logo'); // активация логотипа кастомного
 add_theme_support('post-thumbnails'); //включить изображение записи метки в записях
+add_theme_support('menus'); //активируем меню
+// и в внешний вид настройки темы создать меню
+add_filter('nav_menu_link_attributes', 'filter_nav_menu_link__attributes', 10, 3);
+function filter_nav_menu_link__attributes($atts, $item, $args)
+{
+    if ($args->menu === 'Main') {
+        $atts['class'] = 'header__nav-item';
+
+        if ($item->current) { //если текущая стр на которой мы находимся является активной, то мы берем эту ссылку и назначаем новый класс
+            $atts['class'] .= ' header__nav-item-active';
+        }
+    }
+    return $atts; //возвращаем измененные атрибуты
+};
 
 function my_acf_google_map_api($api)
 {

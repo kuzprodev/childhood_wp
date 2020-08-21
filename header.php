@@ -54,7 +54,22 @@
                 </div>
             </div>
             <nav class="row" data-slide="1">
-                <ul class="header__nav">
+                <?php wp_nav_menu([
+                    'menu'            => 'Main',
+                    //название менюж из административной панели
+                    'container'       => false,
+                    // тег в который оборачивается меню
+                    'menu_class'      => 'header__nav',
+                    'echo'            => true,
+                    //можем записать в переменную чтоб потом просто как-то использовать, если true то мы выводим в качестве штмл верстки
+                    'fallback_cb'     => 'wp_page_menu',
+                    'items_wrap'      => '<ul class="header__nav">%3$s</ul>',
+                    // как будет обернута каждая ссылка сформированная в этом меню
+                    'depth'           => 1 //вложенность уровень
+                ]);
+                ?>
+
+                <!-- <ul class="header__nav">
                     <li>
                         <a class="header__nav-item" href="#about">Про компанию</a>
                     </li>
@@ -70,7 +85,7 @@
                     <li>
                         <a class="header__nav-item" href="#contacts">Контакты и отзывы</a>
                     </li>
-                </ul>
+                </ul> -->
             </nav>
         </div>
         <div class="header__hamburger">
