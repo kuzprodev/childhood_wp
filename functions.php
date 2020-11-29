@@ -31,7 +31,11 @@ function filter_nav_menu_link__attributes($atts, $item, $args)
         if ($item->current) { //если текущая стр на которой мы находимся является активной, то мы берем эту ссылку и назначаем новый класс
             $atts['class'] .= ' header__nav-item-active';
         }
-    }
+        // print_r($item); //id это индефикатор который меняется в каждом сайте конечно, но тут для необходимой стр он 188
+        if ($item->ID === 188 && (in_category('soft_toys') || in_category('deu_toys'))) {
+            $atts['class'] .= ' header__nav-item-active';
+        }
+    };
     return $atts; //возвращаем измененные атрибуты
 };
 
